@@ -1,0 +1,24 @@
+#navigator-toolbox {
+	-moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+}
+
+.tabbrowser-tab:not([visuallyselected="true"], [multiselected]), .tabbrowser-tab:-moz-lwtheme {
+	color: #fcfcfc !important;
+}
+
+#TabsToolbar .toolbarbutton-1 {
+	color: #fcfcfc !important;
+}
+
+#TabsToolbar .toolbarbutton-1:hover {
+	color: #000 !important;
+}
+
+#urlbar:not([focused="true"]) > #urlbar-background, #searchbar:not(:focus-within) {
+	background-color: #e8e8e8 !important;
+}
+/*
+#nav-bar {
+	-moz-appearance: -moz-mac-vibrant-titlebar-light !important;
+}
+*/
