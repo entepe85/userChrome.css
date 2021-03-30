@@ -17,8 +17,8 @@
 #urlbar:not([focused="true"]) > #urlbar-background, #searchbar:not(:focus-within) {
 	background-color: #e8e8e8 !important;
 }
-
-#nav-bar {
-	-moz-appearance: -moz-mac-vibrant-titlebar-light !important;
-}
 */
+#nav-bar {
+	border-bottom: 1px solid var(--panelview-toolbarbutton-hover-bgcolor);
+}
+
