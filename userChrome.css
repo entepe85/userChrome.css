@@ -1,7 +1,7 @@
 #main-window:not([lwtheme="true"]) #navigator-toolbox {
-	-moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+	-moz-appearance: -moz-mac-vibrant-titlebar-light !important;
 }
-
+/*
 .tabbrowser-tab:not([visuallyselected="true"], [multiselected]), .tabbrowser-tab:-moz-lwtheme {
 	color: #fcfcfc !important;
 }
@@ -20,4 +20,50 @@
 */
 #nav-bar {
 	border-bottom: 1px solid var(--panelview-toolbarbutton-hover-bgcolor);
+}
+
+.tab-background {
+	position: relative;
+}
+
+.tab-background::after {
+	content: '';
+	position: absolute;
+	top: calc(100% - 2px);
+	background-color: turquoise;
+	height: 2px;
+	border-radius: 0 0 var(--tab-border-radius) var(--tab-border-radius);
+	background-image: var(--panel-separator-zap-gradient);
+	width: 100%;
+	transform: scale(0,1);
+	transform-origin: center center;
+	transition: transform 75ms ease-in-out;
+}
+
+#TabsToolbar:not([brighttext]) #tabbrowser-tabs:not([noshadowfortests]) .tabbrowser-tab:is([visuallyselected="true"], [multiselected]) > .tab-stack > .tab-background {
+	box-shadow: none !important;
+}
+
+#TabsToolbar:not([brighttext]) #tabbrowser-tabs:not([noshadowfortests]) .tabbrowser-tab:is([visuallyselected="true"], [multiselected]) > .tab-stack > .tab-background::after {
+	transform: scale(1,1);
+}
+
+.tab-label-container.proton {
+	padding-bottom: 3px !important;
+}
+
+.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
+	display: none !important;
+}
+
+.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background::before {
+	content: '';
+	height: 4px;
+	width: 4px;
+	border-radius: 2px;
+	background-color: var(--identity-icon-color);
+	top: 4px;
+	right: 4px;
+	display: inline-block;
+	position: absolute;
 }
