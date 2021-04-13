@@ -23,18 +23,27 @@
 }
 
 .tab-background {
+	/* Remove the border radius */
+	border-radius: var(--tab-border-radius) var(--tab-border-radius) 0 0 !important;
 	position: relative;
+	/* No gap between tab and nav bar */
+	margin-bottom: 0 !important;
 }
 
 .tab-background::after {
 	content: '';
 	position: absolute;
-	top: calc(100% - 2px);
+/*	top: calc(100% - 2px);*/
+	/* Shift it upwards */
+	bottom: 4px;
 	background-color: turquoise;
 	height: 2px;
-	border-radius: 0 0 var(--tab-border-radius) var(--tab-border-radius);
+	/* border-radius: 0 0 var(--tab-border-radius) var(--tab-border-radius);*/
 	background-image: var(--panel-separator-zap-gradient);
-	width: 100%;
+	/* width: 100%; */
+	/* Position it correctly */
+	left: var(--inline-tab-padding);
+	right: var(--inline-tab-padding);
 	transform: scale(0,1);
 	transform-origin: center center;
 	transition: transform 75ms ease-in-out;
@@ -49,7 +58,7 @@
 }
 
 .tab-label-container.proton {
-	padding-bottom: 3px !important;
+	padding-bottom: 2px !important;
 }
 
 .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
@@ -66,4 +75,12 @@
 	right: 4px;
 	display: inline-block;
 	position: absolute;
+}
+
+#nav-bar:not([tabs-hidden="true"]) {
+	margin-top: -4px !important;
+}
+
+:root[tabsintitlebar] .titlebar-buttonbox {
+	margin-top: -4px !important;
 }
