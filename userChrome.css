@@ -108,6 +108,16 @@
 	margin-bottom: -4px !important;
 }
 
-#TabsToolbar .toolbarbutton-1 > .toolbarbutton-icon {
+#TabsToolbar .toolbarbutton-1 > .toolbarbutton-icon,
+#TabsToolbar .toolbarbutton-1 > .toolbarbutton-badge-stack {
 	border-radius: var(--tab-border-radius) var(--tab-border-radius) 0 0 !important;
 }
+
+#scrollbutton-up,
+#scrollbutton-down {
+	border: 0 !important;
+	border-radius: border-radius: calc(var(--tab-border-radius) + 1.5px) calc(var(--tab-border-radius) + 1.5px) 0 0 !important;
+	border-top: 4px solid transparent !important;
+	padding: 0 calc(var(--toolbarbutton-inner-padding) - 6px) !important;
+}
+
