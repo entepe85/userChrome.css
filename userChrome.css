@@ -103,3 +103,11 @@
 #urlbar {
 	--urlbar-toolbar-height: 36px !important;
 }
+
+#TabsToolbar .toolbarbutton-1 {
+	margin-bottom: -4px !important;
+}
+
+#TabsToolbar .toolbarbutton-1 > .toolbarbutton-icon {
+	border-radius: var(--tab-border-radius) var(--tab-border-radius) 0 0 !important;
+}
