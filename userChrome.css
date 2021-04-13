@@ -35,7 +35,7 @@
 	position: absolute;
 /*	top: calc(100% - 2px);*/
 	/* Shift it upwards */
-	bottom: 4px;
+	bottom: 0;
 	background-color: turquoise;
 	height: 2px;
 	/* border-radius: 0 0 var(--tab-border-radius) var(--tab-border-radius);*/
@@ -57,9 +57,11 @@
 	transform: scale(1,1);
 }
 
+/*
 .tab-label-container.proton {
 	padding-bottom: 2px !important;
 }
+*/
 
 .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
 	display: none !important;
@@ -77,10 +79,27 @@
 	position: absolute;
 }
 
-#nav-bar:not([tabs-hidden="true"]) {
-	margin-top: -4px !important;
+:root {
+	--tab-min-height: 32px !important;
+	--urlbar-container-height: 36px !important;
 }
 
-:root[tabsintitlebar] .titlebar-buttonbox {
-	margin-top: -4px !important;
+:root:not([uidensity="compact"]) .tab-content {
+	padding-top: 2px !important;
+}
+
+:root:not([uidensity="compact"]) .tab-icon-stack {
+	padding-top: 1px !important;
+}
+
+.tab-close-button {
+	margin-top: 2px !important;
+}
+
+#urlbar-container {
+	--urlbar-container-height: 36px !important;
+}
+
+#urlbar {
+	--urlbar-toolbar-height: 36px !important;
 }
