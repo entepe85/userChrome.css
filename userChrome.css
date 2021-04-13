@@ -63,6 +63,14 @@
 }
 */
 
+.tabbrowser-tab {
+	padding-inline: 0 !important;
+}
+
+.tab:last-of-type {
+	padding-inline-end: 0 !important;
+}
+
 .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
 	display: none !important;
 }
